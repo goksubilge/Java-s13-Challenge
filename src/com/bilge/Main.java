@@ -1,4 +1,4 @@
-package employeeApp;
+package com.bilge;
 
 /**
  * Uygulamanın amacı Java'da nesne tabanlı programlamanın temellerinin oluşturulmasıdır.
