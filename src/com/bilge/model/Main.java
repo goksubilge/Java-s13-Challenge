@@ -3,6 +3,11 @@ import com.bilge.enums.Plan;
 import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
+        project();
+    }
+    public static void project() {
+        System.out.println( "----- Health Plans ----- " );
+
         HealthPlan Plan1 = new HealthPlan(1,"1. Sigorta", Plan.PINKSPECIAL);
         HealthPlan Plan2 = new HealthPlan(2,"2. Sigorta", Plan.PINKBONUS);
 
@@ -26,5 +31,23 @@ public class Main {
         employee.addHealthPlan(2,"3. Sigorta"); // 3. Sigorta değeri 2. index'e eklendi
         System.out.println(Arrays.toString(employee.getHealthPlans())); // ya da for döngüsüyle her bir elemanını gezip bastırabilirdim.
         // çıktısı => [1. Sigorta, 2. Sigorta, 3. Sigorta]
+
+        System.out.println(" ----- Employees -----");
+
+        Employee developer = new Employee(2, "Mehmet", "mehmet@test.com", "12345", healthPlans);
+
+        // Array oluşturma:
+        String[] developerNames = new String[5];
+        developerNames[0] = developer.getFullName();
+
+        // Test2
+        Company company = new Company(1,"WIT", 500000000,developerNames);
+        company.addEmployee(0,"Bilge Goksu"); // İlgili index dolu! Developer mevcut.
+        company.addEmployee(5,"Bilge Goksu"); // Olmayan index için atama yapıldı: 5
+        company.addEmployee(1,"Bilge Goksu");
+        // çıktısı => Company Details: {id= 1, name:WIT, giro=5.0E8, developerNames:[Mehmet, Bilge Goksu, null, null, null]}
+        System.out.println(company);
     }
+    // static olan bir method 'un içine static olmayan bir method çağıramazsın, GÖRMEZ !
+    //
 }

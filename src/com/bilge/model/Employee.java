@@ -99,4 +99,9 @@ public class Employee {
  * private boolean isMarried;
  * public boolean isMarried() {return isMarried;}
  * public void setMarried(boolean married) {isMarried = married;}
+ *********
+ * hatayı catch'e düşürmeden çözebiliyorsan her zaman öncesinde çöz, çözemezsen catch'te çöz.
+ * index value, ana biri tarafından veriliyor. öyle olduğu için de ya girişte bunu kontrol edicem "GARD" ile ya da try catch yazıcam.
+ * NullPointer hatası benim kendi array 'imden geliyor. ben o hatayı catch 'e düşürmeden çözebiliyorum. ilk tercihim catch 'siz çözmek o yüzden.
+ * if (healthPlan != null && healthPlan.equals(name))  bu şekilde çözdük. null kontrolü ekleyerek koda.
  */
